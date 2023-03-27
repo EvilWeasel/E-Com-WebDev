@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="search">
+    <input type="text" 
+    name="search-field" 
+    id="search-field">
+  </div>
+
+  <div id="clock"></div>
+  
+  <div class="section-container">
+    <!-- Die einzelnen Child-Elemente der Flexbox (row) hier als link-container benannt, zur besseren Übersicht welche Elemente das Layout angeben -->
+    <!-- Die Columns dienen hier als Container für unsere Linksammlungen -->
+    <div class="link-container">
+      <!-- Überschrift für die Link-Container -->
+      <h1>IT-News</h1>
+      <!-- Eine Sammlung an Links für häufig besuchte Webseiten -->
+      <ul>
+        <!-- Individuelle Links als sogenannte List-Items -->
+        <li>
+          <a href="https://www.ccc.de/en">Chaos Computer Club e.V.</a>
+        </li>
+        <li>
+          <a href="https://www.heise.de">Heise Online</a>
+        </li>
+        <li>
+          <a href="https://www.golem.de/specials/it-sicherheit/">Golem IT-Security</a>
+        </li>
+        <li>
+          <a href="https://www.linuxjournal.com">Linux Journal</a>
+        </li>
+        <li>
+          <a href="https://opensource.com/tags/news">OpenSource.com News</a>
+        </li>
+      </ul>
+    </div>
+    <div class="link-container">
+      <h1>Gaming</h1>
+      <ul>
+        <li>
+          <a target="_blank" href="https://www.rockpapershotgun.com/">Rock Paper Shotgun</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://de.ign.com/article/news">IGN-News</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.gamestar.de/news/">Gamestar-News</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.gamestar.de/releaseliste/">Gamestar-Releaseliste</a>
+        </li>
+      </ul>
+    </div>
+    <div class="link-container">
+      <h1>Social/Coding</h1>
+      <ul>
+        <li>
+          <a target="_blank" href="https://www.reddit.com/">Reddit</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.stackoverflow.com/">StackOverflow</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.github.com/">Github</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.udemy.com/">Udemy</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.fsf.org/">Free Software Foundation</a>
+        </li>
+      </ul>
+    </div>
+    <div class="link-container">
+      <h1>Kaffeepause</h1>
+      <ul>
+        <li>
+          <a target="_blank" href="https://www.youtube.com/">Youtube</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.twitch.tv/">Twitch TV</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.primevideo.com/">Prime Video</a>
+        </li>
+        <li>
+          <a target="_blank" href='https://www.freepik.com/search?format=search&query=background&selection=1&type=vector'>Wallpaper</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="quote-box"></div>
+</body>
+</html>

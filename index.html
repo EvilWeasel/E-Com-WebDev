@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Tobias Wehrle</title>
+</head>
+<body>
+    <nav class="navigation sec">
+        <div class="logo">Tobias Wehrle</div>
+        <ul class="link-container">
+            <li>About me</li>
+            <li>Projects</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <section class="hero sec">
+        <img src="assets/images/me-bg-removal.png" alt="Portrait">
+        <div>
+            <h1>Tobias Wehrle</h1>
+            <h1>FullStack Developer<br> and Educator</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi possimus quis error id sapiente nesciunt quam minima magnam temporibus eveniet laboriosam voluptatibus doloremque aperiam quae quaerat laudantium beatae libero quas repudiandae amet, et voluptate corporis sint. Cumque harum cum distinctio.</p>
+        </div>
+    </section>
+    <section class="about sec">
+<!--         <img src="https://picsum.photos/seed/snickers/400/400" alt="Polaroid"> -->
+        <div class="about-container">
+            <h2>About Me</h2>
+            <p class="privat">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempora velit magnam obcaecati ullam, aut vitae quaerat perferendis asperiores ut.</p>
+            <p class="business">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, dicta!</p>
+            <p class="quote">"Programmieren ist eine der größten Erfindungen der menschlichen Kultur, weil es den Menschen ermächtigt, ihre Schöpfungskraft durch Code zu verwirklichen."</p>
+            <p class="quote-origin"> - Marc Andreessen</p>
+        </div>
+    </section>
+    <section class="projects sec">
+        <h1>Projects</h1>
+        <div class="card-container">
+            <div>
+                <a href="taschenrechner/"><img src="https://picsum.photos/500/400" alt="project 1"></a>
+                <div>
+                    <h3>Project 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, amet!</p>
+                </div>
+            </div>
+            <div>
+                <a href="personal_homepage/"><img src="https://picsum.photos/500/400" alt="project 2"></a>
+                <div>
+                    <h3>Project 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, beatae?</p>
+                </div>
+            </div>
+            <div>
+                <a href="#"><img src="https://picsum.photos/500/400" alt="project 3"></a>
+                <div>
+                    <h3>Project 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, earum!</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <footer class="footer sec">
+        <div class="social-links">
+          <a href="https://www.facebook.com/deinfacebookname/" target="_blank">
+            <span class="cta">Finde mich auf</span>
+            <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+          </a>
+          <a href="https://www.instagram.com/deininstagramname/" target="_blank">
+            <span class="cta">Folge mir auf</span>
+            <span class="social-icon"><i class="fab fa-instagram"></i></span>
+          </a>
+          <a href="https://twitter.com/deintwittername/" target="_blank">
+            <span class="cta">Verbinde dich mit mir auf</span>
+            <span class="social-icon"><i class="fab fa-twitter"></i></span>
+          </a>
+        </div>
+    </footer>
+    <script>
+        let currentSection = 0;
+        const sections = document.querySelectorAll(".sec");
+    
+        document.addEventListener("wheel", (event) => {
+            event.preventDefault();
+    
+            if (event.deltaY > 0) {
+                // Scroll down
+                if (currentSection < sections.length - 1) {
+                    currentSection++;
+                }
+            } else {
+                // Scroll up
+                if (currentSection > 0) {
+                    currentSection--;
+                }
+            }
+            
+            scrollToSection();
+        });
+    
+        function scrollToSection() {
+            window.scrollTo({
+                top: sections[currentSection].offsetTop,
+                behavior: "smooth",
+            });
+        }
+    </script>
+</body>
+</html>

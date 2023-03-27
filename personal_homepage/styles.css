@@ -1,0 +1,168 @@
+* {
+
+}
+
+html {
+  height: 100vh;
+}
+
+:root {
+  --color-main: #CC00CC;
+  --alt-color-main: #6600ff;
+  --color-translucent: rgba(0,0,0,.8);
+  --color-text: #8c8c8c;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Roboto Slab', serif;
+  background-image: url('../assets/images/background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 3em;
+  /* flex-flow: row wrap; Shorthand für wrap und direction */
+  justify-content: space-around;
+  margin: 1.5em 1.5em;
+  /* margin-bottom: 1.5em; */
+}
+
+/* .visualize-elem {
+  border: 1px solid black;
+} */
+
+.link-container {
+  display: inline-block;
+  min-width: 200px;
+  width: 22%;
+  border: 3px double var(--color-main);
+  border-radius: 25px;
+  padding: 30px;
+  padding-top: 20px;
+  background-color: var(--color-translucent);
+}
+
+#clock {
+  text-align: center;
+  font-size: 5em;
+  font-weight: 800;
+  font-family: "Anton";
+  color: var(--color-main);
+  text-shadow: 5px 5px 5px black;
+  margin-top: 13vh;
+}
+
+.link-container > ul > li > a {
+  color: var(--color-text);
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.link-container > ul > li {
+  list-style-type: none;
+}
+
+.link-container > ul {
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+div.link-container > h1 {
+  font-size: 2em;
+  color: var(--color-main);
+  font-weight: 800;
+  text-shadow: .5px .5px;
+  margin-top: 0px;
+}
+
+/*
+  Suchfeld
+*/
+
+#search {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-translucent);
+  position: absolute;
+  top: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-field {
+  width: 90%;
+  background-color: black;
+  color: #ffffff;
+  border: 2px solid var(--color-main);
+  border-radius: 30px;
+  font-family: 'Roboto Mono';
+  font-size: 5rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+#quote-box {
+  font-size: 1.2em;
+  color: white;
+  align-self: flex-end;
+  text-align: end;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: var(--color-translucent);
+  max-width: 30%;
+  min-width: 25%;
+  margin-right: 3rem;
+}
+
+@media only screen and (max-width: 1225px) {
+  body {
+    background-image: url('../assets/images/background-mobile.jpg');
+    background-attachment: fixed;
+    overflow-y: scroll;
+  }
+
+  .section-container {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+  }
+
+  .link-container {
+    min-width: 60vw;
+    width: 22%;
+    border: 7px double var(--color-main);
+    border-radius: 25px;
+    padding: 30px;
+    padding-top: 20px;
+    background-color: var(--color-translucent);
+  }
+
+  #clock {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    text-shadow: 3px 5px 0 black;
+    color: var(--alt-color-main);
+  }
+
+  div.link-container > h1 {
+    font-size: 2em;
+    color: var(--alt-color-main);
+    text-shadow: 3px 5px 0 black;
+    margin-top: 0px;
+  }
+
+  #quote-box {
+    display: none;
+  }
+}

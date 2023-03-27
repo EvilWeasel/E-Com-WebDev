@@ -1,0 +1,49 @@
+:root {
+    --color-gradient1: #005ba1;
+    --color-gradient2: #2e00a1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px); /* == 100px 100px 100px 100px; */
+    grid-template-rows: 100px minmax(120px, 300px) repeat(5, 100px);
+    background: linear-gradient(to bottom, var(--color-gradient1), var(--color-gradient2), var(--color-gradient2), var(--color-gradient1));
+    gap: .2em;
+}
+
+/* 
+    grid-column => shorthand für: grid-column-start & grid-column-end
+    anfangsposition und endposition des Elements.
+    1 => Erste Spalte
+    -1 => Letzen Spalte (egal wie viele)
+*/
+.title {
+    grid-column: 1 / -1;
+}
+
+.display {
+    grid-column: 1 / -1;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    text-align: end;
+    padding: 5px;
+}
+
+button {
+    height: 100%;
+    border: 1px solid #000000;
+    background-color: rgba(255,255,255,0.3);
+    font-size: 2rem;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.8);
+}
+

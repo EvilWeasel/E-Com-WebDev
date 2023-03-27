@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taschenrechner</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <style>
+        .container {
+            width: 60%;
+            height: 60%;
+            display: flex;
+            font-size: 2em;
+            flex-wrap: wrap;
+        }
+        input {
+            width: 100%;
+            font-size: 1.6em;
+        }
+        #result {
+            font-size: 2em;
+            text-decoration: underline;
+        }
+        /* #result:hover {
+            background-color: blue;
+        } */
+        #result::before {
+            content: '= ';
+        }
+        button {
+            font-size: 1.4em;
+            font-weight: 500;
+        }
+    </style> -->
+  </head>
+  <body>
+    <!-- <div class="container">
+        <input type="text" name="num1" id="num1">
+        <input type="text" name="num2" id="num2">
+        <button type="button" id="btn">Berechnen</button>
+        <div id="result">200</div>
+    </div> -->
+    <div class="calculator-grid">
+      <div class="title"></div>
+      <div class="display">
+        <div class="interim-result"></div>
+        <div class="result">0</div>
+      </div>
+      <!-- data-smile == Attribut -->
+      <button data-smile>😁</button>
+      <button data-ce>CE</button>
+      <button data-c>C</button>
+      <button data-delete>Delete</button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operation>/</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>*</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operation>-</button>
+      <button data-equals>=</button>
+      <button data-number>0</button>
+      <button data-number>,</button>
+      <button data-operation>+</button>
+    </div>
+  </body>
+</html>
